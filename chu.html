@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chupacabra</title>
+
+</head>
+
+
+<style>
+
+/*@font-face {
+    font-family: Jaapo;
+    src: url(Jaapokkienchance-Regular.otf);
+}
+*/
+@font-face{
+	font-family: Jaaposub;
+	src: url(Jaapokkisubtract-Regular.otf);
+}
+
+.wrapper {
+    text-align: center;
+}
+
+p{
+	font-family: Jaaposub;
+	color: orange;
+	text-align: center;
+
+}
+
+button{
+	background-color: white;
+	color: rgb(0, 153, 204);
+	border: none;
+	padding: 10px;
+	font-family: Jaaposub;
+	font-size: 15px;
+    border-radius: 4px 4px 0 0;
+    display: inline;
+    border: none;
+  	padding: 1 0px;
+
+}
+
+body{
+	background-color: rgb(0, 153, 204);
+}
+
+h1{
+	font-family: Jaaposub;
+	font-size: 100px;
+	text-align: center;
+	color: orange;
+	background-color: white;
+	letter-spacing: 6px;
+	line-height: 70%
+}
+
+h2{
+	font-family: Jaaposub;
+	text-align: center;
+	color: orange;
+	font-size: 30px;
+	line-height: 30%;
+}
+
+h3{
+	font-family: Jaaposub;
+	text-align: center;
+	color: orange;
+	font-size: 20px;
+}
+
+ul#menu {
+    padding: 0;
+    text-align: center;
+}
+
+ul#menu li {
+    display: inline;
+}
+
+ul#menu li a {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 153, 204);
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: Jaaposub;
+    border-radius: 4px 4px 0 0;
+    text-align: center;
+}
+
+ul#menu li button:hover {
+    background-color: orange;
+}
+
+table, th, td {
+	font-family: Jaaposub;
+	color: orange;
+    border: 2px solid #0099CC;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+table#t01 {
+    width: 100%;    
+    background-color: white;
+}
+</style>
+</head>
+
+
+
+<body>
+
+<header>
+	<h1>CHUPACABRA</h1>
+	<h2>DONUT FACTORY</h2>
+	<h3>franchise manager</h3>
+
+
+</header>
+
+<!-- Start JS --------------------------------
+ -->
+
+<script>
+
+function franchiseObj(loc, min, max, avg, open, close){
+	var franchise = {};	
+	this.loc = loc;
+	this.min = min;
+	this.max = max;
+	this.avg = avg;
+	this.open = open;
+	this.close = close;
+	var donutsPerDay = 0;
+
+	this.customers = function(){
+
+	}
+
+	this.supply = function(){
+		donutsPerDay = Math.ceil(((Math.random()*max)+min)*4.50*10); 
+		donutsPerHour = Math.ceil((((Math.random()*max)+min)*4.50*10)/24);
+
+		console.log("donughts needed:: day:", + donutsPerDay + " hour:", + donutsPerHour);	
+		};
+}
+
+var downtown = new franchiseObj('downtown', 8, 43, 4.50, 6, 4);
+var alberta = new franchiseObj('alberta', 4, 37, 2, 10, 8);
+var hawthorne = new franchiseObj('hawthorne', 9, 23, 6.33, 9, 5);
+var sellwood = new franchiseObj('sellwood', 2, 28, 1.25, 11, 3);
+var sandy = new franchiseObj('sandy', 8, 58, 3.75, 5, 3);
+
+var franchises = [downtown, alberta, hawthorne, sandy];
+
+downtown.supply();
+alberta.supply();
+hawthorne.supply();
+sellwood.supply();
+sandy.supply();
+
+//code to alter the data by button click
+
+function displayDowntown() {
+    document.getElementById("demo").innerHTML = 'downtown.supply()';
+}
+
+function displayDowntown() {
+    document.getElementById("demo1").innerHTML = 'alberta.supply()';
+
+}
+
+</script>
+
+
+
+<!-- start HTML------------------>
+
+
+<p>Use the following table to asses the status of our Chupacabra franchise locations.</p>
+
+<ul id="menu">
+  <li><button onclick='displayDowntown()'>Downtown</button></li>
+  <li><button onclick='displayAlberta()'>Alberta</button></li>
+   <li><button id = "hawthorne">Hawthorne</a></li>
+  <li><button id = "sellwood">Sellwood</button></li>
+  <li><button id = "sandy">Sandy</button></li>
+</ul>  
+
+
+
+<table id="t01">
+  <tr>
+  	<th>Location</th>		
+    <th>Est supply per day</th>		
+    <th>Est supply per hour</th>
+    <th>Min. Customers</th>
+    <th>Max. Customers</th>
+    <th>Cost per Donught</th>
+
+
+
+
+  </tr>
+  <tr>
+<!--   	needs to change based on button
+ -->    
+
+ 	<td id = 'demo'>Downtown</td>
+    <td id = 'demo'>594</td>
+    <td id = 'demo1'>48</td>
+    <td id = 'demo2'>8</td>
+    <td id = 'demo3'>43</td>
+    <td id = 'demo4'>$4.50</td>
+
+  </tr>
+
+    <tr>
+ 	<td id = 'demo'>Alberta</td>
+    <td id = 'demo'>1296</td>
+    <td id = 'demo1'>78</td>
+    <td id = 'demo2'>4</td>
+    <td id = 'demo3'>37</td>
+    <td id = 'demo4'>$2.00</td>
+
+  </tr>
+
+    <tr>
+ 	<td id = 'demo'>Hawthorne</td>
+    <td id = 'demo'>866</td>
+    <td id = 'demo1'>52</td>
+    <td id = 'demo2'>9</td>
+    <td id = 'demo3'>23</td>
+    <td id = 'demo4'>$6.33</td>
+
+  </tr>
+ 
+ 
+    <tr>
+ 	<td id = 'demo'>Sellwood</td>
+    <td id = 'demo'>970</td>
+    <td id = 'demo1'>52</td>
+    <td id = 'demo2'>2</td>
+    <td id = 'demo3'>28</td>
+    <td id = 'demo4'>$1.25</td>
+
+  </tr>
+ 
+    <tr>
+ 	<td id = 'demo'>Sandy</td>
+    <td id = 'demo'>1430</td>
+    <td id = 'demo1'>87</td>
+    <td id = 'demo2'>8</td>
+    <td id = 'demo3'>58</td>
+    <td id = 'demo4'>$3.75</td>
+
+  </tr>
+<p id="info"></p>
+
+
+
+</body>
+</html>
