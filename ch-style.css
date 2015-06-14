@@ -1,0 +1,97 @@
+
+@font-face{
+	font-family: Jaaposub;
+	src: url(Jaapokkisubtract-Regular.otf);
+}
+
+.wrapper {
+    text-align: center;
+}
+
+p{
+	font-family: Jaaposub;
+	color: orange;
+	text-align: center;
+
+}
+
+button{
+	background-color: white;
+	color: rgb(0, 153, 204);
+	border: none;
+	padding: 10px;
+	font-family: Jaaposub;
+	font-size: 15px;
+    border-radius: 4px 4px 0 0;
+    display: inline;
+    border: none;
+  	padding: 1 0px;
+
+}
+
+body{
+	background-color: rgb(0, 153, 204);
+}
+
+h1{
+	font-family: Jaaposub;
+	font-size: 100px;
+	text-align: center;
+	color: orange;
+	background-color: white;
+	letter-spacing: 6px;
+	line-height: 70%
+}
+
+h2{
+	font-family: Jaaposub;
+	text-align: center;
+	color: orange;
+	font-size: 30px;
+	line-height: 30%;
+}
+
+h3{
+	font-family: Jaaposub;
+	text-align: center;
+	color: orange;
+	font-size: 20px;
+}
+
+ul#menu {
+    padding: 0;
+    text-align: center;
+}
+
+ul#menu li {
+    display: inline;
+}
+
+ul#menu li a {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 153, 204);
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: Jaaposub;
+    border-radius: 4px 4px 0 0;
+    text-align: center;
+}
+
+ul#menu li button:hover {
+    background-color: orange;
+}
+
+table, th, td {
+	font-family: Jaaposub;
+	color: orange;
+    border: 2px solid #0099CC;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+table#t01 {
+    width: 100%;    
+    background-color: white;
+}
